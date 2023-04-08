@@ -10,7 +10,7 @@ Ania
 
 Dla każdego przygotowałem branch, aby mógł sobie na niego commitować. Na maina wrzucimy kod, który razem poskładamy podczas spotkań.
 
-Przemek
+- Przemek
 
 Wykonane:
 Wstępnie odtworzony wizualnie kółko i krzyżyk (bez logiki)
@@ -20,7 +20,7 @@ Wstępnie odtworzony wizualnie kółko i krzyżyk (bez logiki)
 Do zrobienia:
 Poprawienie ikonek w grze, dodanie przekreślenia, wykrywanie zwycięstwa
 
-Siwy / Ania
+- Siwy / Ania
 
 Wykonane:
 Wstępny layout papier kamień - zaczyna JS
@@ -28,11 +28,11 @@ Wstępny layout papier kamień - zaczyna JS
 Do zrobienia:
 Poprawienie stylistyki - logika
 
-Durczok
+- Durczok
 
 Do zrobienia:
 LandingPage / RWD
 
-Niko
+- Niko
 
 Bot kółko i krzyżyk
