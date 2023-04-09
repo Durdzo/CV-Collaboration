@@ -1,0 +1,48 @@
+body {
+  background-color: grey;
+}
+
+.screen {
+  height: 700px;
+  background-color: lightseagreen;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#start {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: lightblue;
+}
+
+.topScreen {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chooseMenu {
+  margin-top: 80px;
+  width: 450px;
+  height: 150px;
+  background-color: grey;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#rock, #paper, #scissors {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px black solid;
+}
