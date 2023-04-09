@@ -7,3 +7,4 @@ startBtn.onclick = startGame
 rockBtn.onclick = rock
 paperBtn.onclick = paper
 scissorsBtn.onclick = scissors
+
