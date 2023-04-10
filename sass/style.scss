@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f2f2f2;
+    font-size: 1.6rem;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    width: 20rem;
+    height: 4rem;
+    margin-right: 2rem;
+    background-color: #2e86ab;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    color: #252525;
+    background-color: #ffce28;
+}
+
+.titles {
+    font-weight: 700;
+    font-size: 3rem;
+    color: #252525;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+// NAVBAR
+
+nav {
+    position: fixed;
+    z-index: 100;
+    height: 80px;
+    width: 100vw;
+    background-color: #ffce28;
+
+    .author {
+        position: absolute;
+        top: 18px;
+        font-size: 3.6rem;
+        padding: 0 2.5rem;
+        text-transform: capitalize;
+        font-family: "Sacramento";
+    }
+    .nav-box {
+        display: flex;
+        justify-content: end;
+
+        a {
+            margin: 28px 0px 0;
+            padding: 0 1.5rem;
+            font-weight: 700;
+            font-size: 2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #252525;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+    }
+    .nav-box:last-child {
+        margin-right: 3rem;
+    }
+}
+
+// HEADER / ABOUT
+
+.about {
+    width: 100%;
+    height: 100vh;
+
+    .about-box {
+        position: relative;
+        width: 80rem;
+        height: 33rem;
+
+        .text-content {
+            position: absolute;
+            height: 12.5em;
+            width: 27em;
+            top: 35rem;
+            left: 58rem;
+
+            .about-title {
+                margin-bottom: 1.1em;
+                color: #252525;
+            }
+            span {
+                display: flex;
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size: 3.6rem;
+            }
+            .blue {
+                color: #2e86ab;
+            }
+        }
+
+        img {
+            position: absolute;
+            height: 32.2rem;
+            width: 32.2rem;
+            border-radius: 50%;
+            left: 21rem;
+            top: 32rem;
+            border: 5px solid transparent;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: border 0.3s;
+            transition: scale 0.4;
+            transition: 0.3s;
+        }
+
+        img:hover {
+            border: 5px solid #2e86ab;
+            transform: scale(1.05);
+        }
+
+        svg {
+            position: absolute;
+            top: 19.7rem;
+            left: 7rem;
+            z-index: -1;
+        }
+    }
+}
+
+// PROJECTS
+
+.projects {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+
+    .projects-heading {
+        padding-top: 12rem;
+        padding-bottom: 7rem;
+        font-weight: 700;
+        font-size: 4.8rem;
+        text-transform: uppercase;
+        text-align: center;
+        color: #252525;
+    }
+
+    .first-project {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 3rem;
+        padding: 0 21rem;
+
+        .game-one-img {
+            height: 300px;
+        }
+    }
+
+    .first-project-box {
+        margin: 10px 50px;
+
+        .first-project-title {
+            padding-bottom: 1.5rem;
+            padding-top: 4rem;
+        }
+
+        .first-project-text {
+            width: 45rem;
+            padding-bottom: 2rem;
+            font-weight: 300;
+            font-size: 1.6rem;
+        }
+    }
+
+    .second-project {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-bottom: 8rem;
+        padding: 0 18rem;
+
+        .game-two-img {
+            height: 300px;
+        }
+    }
+
+    .second-project-box {
+        margin-top: 1rem;
+
+        .second-project-title {
+            padding-top: 40px;
+        }
+
+        .second-project-text {
+            width: 45rem;
+            padding-bottom: 20px;
+            font-weight: 300;
+            font-size: 1.6rem;
+        }
+    }
+}
