@@ -8,3 +8,6 @@ rockBtn.onclick = rock
 paperBtn.onclick = paper
 scissorsBtn.onclick = scissors
 
+function startGame() {
+  console.log("Hello");
+}
