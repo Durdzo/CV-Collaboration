@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation-name: example;
+  animation-duration: 0.3s;
+}
+
+@keyframes example {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#plansza {
+  display: flex;
+  width: 300px;
+  flex-wrap: wrap;
+}
+
+.kwadrat {
+  width: 94px;
+  height: 94px;
+  border: 1px solid black;
+}
+
+#wybor--znaku {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 150px;
+  animation-name: examplesec;
+  animation-duration: 0.3s;
+}
+
+@keyframes examplesec {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.kolko {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.krzyzyk {
+  transform: rotate(-45deg);
+  height: 60px;
+}
+
+.krzyzyk-pion {
+  border: 1px solid black;
+  height: 60px;
+  position: relative;
+}
+
+.krzyzyk-poziom {
+  border: 1px solid rgb(8, 8, 8);
+  height: 60px;
+  position: absolute;
+  top: 0%;
+  left: 29.25%;
+  transform: translate(-50%, -50%);
+  transform: rotate(90deg);
+}
+
+.kwadrat {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  margin-top: 20px;
+  border: none;
+  color: white;
+  font-size: 22px;
+  padding: 20px;
+  background-color: #e55151;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 42px;
+  cursor: pointer;
+}
