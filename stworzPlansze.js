@@ -27,7 +27,7 @@ function obslugaKlikniecia(event) {
   const komorka = event.target;
 
   if (komorka.textContent !== '') {
-    alert('Ta komorka jest już zajęta');
+    alert('Ta komórka jest już zajęta');
     return; // jeśli komórka już jest wypełniona, to nie można jej kliknąć ponownie
   }
 
@@ -50,6 +50,29 @@ function obslugaKlikniecia(event) {
   }
   if (czyWszystkieKomorkiPelne) {
     czyPlanszaPelna = true;
+  }
+
+  // sprawdzenie, czy któryś z graczy wygrał
+  const plansza = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  for (const [a, b, c] of plansza) {
+    if (
+      komorki[a].textContent &&
+      komorki[a].textContent === komorki[b].textContent &&
+      komorki[a].textContent === komorki[c].textContent
+    ) {
+      alert('Gracz ' + komorki[a].textContent + ' wygrał!');
+      czyPlanszaPelna = true;
+      break;
+    }
   }
 }
 
