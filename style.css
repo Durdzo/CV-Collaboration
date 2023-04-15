@@ -133,3 +133,26 @@ button {
     transform: translateX(-50%) scale(0.5);
   }
 }
+
+@media (max-width: 767px) {
+  /* .slide-right,
+  .scale-down {
+    animation: none;
+  } */
+  @keyframes slide-right {
+    from {
+      transform: translateX(0) translateY(0px);
+    }
+    to {
+      transform: translateX(100px) translateY(-195px);
+    }
+  }
+  @keyframes scale-down {
+    from {
+      transform: translateX(0) scale(1);
+    }
+    to {
+      transform: translateX(-120px) scale(0.5);
+    }
+  }
+}
