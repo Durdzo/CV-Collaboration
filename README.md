@@ -1,3 +1,3 @@
 # CV-Collaboration
 
-Pierwsza wersja bez logiki
+Pierwsza wersja prostej gry kółko i krzyżyk
