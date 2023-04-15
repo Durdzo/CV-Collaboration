@@ -3,6 +3,7 @@ import { przyciskRestart } from './przyciskRestart.js';
 export const stworzPlansze = () => {
   const pusteKomorki = ['', '', '', '', '', '', '', '', ''];
   const plansza = document.getElementById('plansza');
+  const info = document.getElementById('info');
 
   pusteKomorki.map((_value, index) => {
     const komorka = document.createElement('div');
@@ -69,7 +70,26 @@ function obslugaKlikniecia(event) {
       komorki[a].textContent === komorki[b].textContent &&
       komorki[a].textContent === komorki[c].textContent
     ) {
-      alert('Gracz ' + komorki[a].textContent + ' wygrał!');
+      // alert('Gracz ' + komorki[a].textContent + ' wygrał!');
+      console.log('Gracz ' + komorki[a].textContent + ' wygrał!');
+      // Tworzenie drugiego diva
+      const secondDiv = document.createElement('div');
+      secondDiv.id = 'second-div';
+      secondDiv.textContent = 'To jest drugi div';
+
+      // Dodawanie drugiego diva do kontenera
+      const info = document.getElementById('info');
+      info.appendChild(secondDiv);
+
+      // Zmiana tekstu drugiego diva
+      const updatedSecondDiv = document.getElementById('second-div');
+      updatedSecondDiv.textContent =
+        'Gracz ' + komorki[a].textContent + ' wygrał!';
+      // Dodaj klasę CSS do elementu, który zawiera tekst
+      updatedSecondDiv.classList.add('slide-right');
+      // Dodaj klasę CSS, która zmniejsza element plansza
+      const plansza = document.getElementById('plansza');
+      plansza.classList.add('scale-down');
       czyPlanszaPelna = true;
       break;
     }

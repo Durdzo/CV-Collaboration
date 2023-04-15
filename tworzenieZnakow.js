@@ -33,7 +33,7 @@ export const tworzenieZnakow = () => {
 
   // Obsługa zdarzenia kliknięcia kółka
   kolko.addEventListener('click', function () {
-    wybranyZnak = 'X';
+    wybranyZnak = 'O';
     console.log('Wybrałeś kółko');
   });
 };

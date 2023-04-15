@@ -98,3 +98,38 @@ button {
   border-radius: 42px;
   cursor: pointer;
 }
+
+#info {
+  margin-top: 20px;
+  font-size: 25px;
+  font-family: sans-serif;
+}
+
+.slide-right {
+  background-color: #5cc4ff;
+  padding: 20px;
+  color: white;
+  animation: slide-right 0.5s forwards;
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(0) translateY(0px);
+  }
+  to {
+    transform: translateX(100%) translateY(-195px);
+  }
+}
+
+.scale-down {
+  animation: scale-down 0.5s forwards;
+}
+
+@keyframes scale-down {
+  from {
+    transform: translateX(0) scale(1);
+  }
+  to {
+    transform: translateX(-50%) scale(0.5);
+  }
+}
