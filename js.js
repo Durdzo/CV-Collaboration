@@ -8,6 +8,7 @@ element.style.display = "block";
 var element = document.getElementById("start");
 element.style.display = "none";
 
+
 var element = document.getElementById("botChoice");
 element.style.display = "block";
 });
