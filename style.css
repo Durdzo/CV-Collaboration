@@ -1,23 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
+<<<<<<< Updated upstream
   background-color: grey;
+=======
+    background-color: grey;
+}
+
+/* #blur::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%) center;
+    filter: blur(10px);
+    display: block;
+} */
+
+.blur {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%) center;
+    filter: blur(10px);
+    opacity: 1;
+    animation: animation;
+}
+
+@keyframes animation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+>>>>>>> Stashed changes
 }
 
 .screen {
-  background-color: lightseagreen;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 400px;
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
 }
 
+<<<<<<< Updated upstream
+=======
+#botChoice {
+    display: none;
+}
+
+.yr-choice {
+    display: flex;
+    justify-content: center;
+    background-color: lightseagreen;
+}
+
+>>>>>>> Stashed changes
 .downScreen {
-  height: 300px;
-  background-color: lightseagreen;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 300px;
+    background-color: lightseagreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+<<<<<<< Updated upstream
 
 
 #playerScore, #botScore {
@@ -30,47 +87,85 @@ body {
 .players {
   font-size: 30px;
   display: none;
+=======
+#user-score,
+#computer-score {
+    font-size: 30px;
+    display: flex;
+    direction: column;
+    justify-content: center;
+}
+
+#players {
+    font-size: 30px;
+    display: block;
+>>>>>>> Stashed changes
 }
 
 #score {
-  height: 150px;
-  width: 100px;
-  background-color: grey;
-  border-radius: 10px;
-
+    height: 150px;
+    width: 100px;
+    background-color: grey;
+    border-radius: 10px;
 }
 
 #start {
+<<<<<<< Updated upstream
   width: 250px;
   height: 250px;
   border-radius: 50%;
   background-color: lightblue;
+=======
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: lightblue;
+    filter: none;
+    z-index: 10;
+}
+
+.container {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    z-index: 10;
+>>>>>>> Stashed changes
 }
 
 .topScreen {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background-color: brown;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .chooseMenu {
-  width: 450px;
-  height: 150px;
-  background-color: grey;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    width: 450px;
+    height: 150px;
+    background-color: grey;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#rock, #paper, #scissors {
-  width: 100px;
-  height: 100px;
-  background-color: white;
-  border-radius: 50%;
-  border: 1px black solid;
+#rock,
+#paper,
+#scissors {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px black solid;
 }
+<<<<<<< Updated upstream
+=======
+
+#result {
+    display: flex;
+    justify-content: center;
+}
+>>>>>>> Stashed changes
