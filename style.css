@@ -30,7 +30,7 @@ body {
 
 
 
-#playerScore, #botScore {
+#user-score, #computer-score {
   font-size: 30px;
   display: flex;
   direction: column;
