@@ -28,8 +28,6 @@ body {
   justify-content: center;
 }
 
-
-
 #user-score, #computer-score {
   font-size: 30px;
   display: flex;
