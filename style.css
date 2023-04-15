@@ -5,23 +5,8 @@
 }
 
 body {
-<<<<<<< Updated upstream
-  background-color: grey;
-=======
     background-color: grey;
 }
-
-/* #blur::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%) center;
-    filter: blur(10px);
-    display: block;
-} */
 
 .blur {
     position: absolute;
@@ -41,8 +26,8 @@ body {
     }
     to {
         opacity: 0;
+        z-index: -1;
     }
->>>>>>> Stashed changes
 }
 
 .screen {
@@ -53,8 +38,6 @@ body {
     height: 400px;
 }
 
-<<<<<<< Updated upstream
-=======
 #botChoice {
     display: none;
 }
@@ -65,7 +48,6 @@ body {
     background-color: lightseagreen;
 }
 
->>>>>>> Stashed changes
 .downScreen {
     height: 300px;
     background-color: lightseagreen;
@@ -74,20 +56,6 @@ body {
     justify-content: center;
 }
 
-<<<<<<< Updated upstream
-
-
-#playerScore, #botScore {
-  font-size: 30px;
-  display: flex;
-  direction: column;
-  justify-content: center;
-}
-
-.players {
-  font-size: 30px;
-  display: none;
-=======
 #user-score,
 #computer-score {
     font-size: 30px;
@@ -99,7 +67,6 @@ body {
 #players {
     font-size: 30px;
     display: block;
->>>>>>> Stashed changes
 }
 
 #score {
@@ -110,12 +77,6 @@ body {
 }
 
 #start {
-<<<<<<< Updated upstream
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background-color: lightblue;
-=======
     width: 250px;
     height: 250px;
     border-radius: 50%;
@@ -129,7 +90,6 @@ body {
     top: 200px;
     left: 100px;
     z-index: 10;
->>>>>>> Stashed changes
 }
 
 .topScreen {
@@ -161,11 +121,8 @@ body {
     border-radius: 50%;
     border: 1px black solid;
 }
-<<<<<<< Updated upstream
-=======
 
 #result {
     display: flex;
     justify-content: center;
 }
->>>>>>> Stashed changes

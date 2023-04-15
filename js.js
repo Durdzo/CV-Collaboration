@@ -1,25 +1,10 @@
-<<<<<<< Updated upstream
-const startBtn = document.querySelector("#start") 
-const rockBtn = document.querySelector("#rock");
-const paperBtn = document.querySelector("#paper");
-const scissorsBtn = document.querySelector("#scissors");
-
-startBtn.onclick = startGame
-rockBtn.onclick = rock
-paperBtn.onclick = paper
-scissorsBtn.onclick = scissors
-
-function startGame() {
-  console.log("Hello");
-}
-=======
 var button = document.getElementById("start");
 button.addEventListener("click", function () {
     var element = document.getElementById("players");
     element.style.display = "block";
 
-    // var element = document.getElementById("start");
-    // element.style.display = "none";
+    var element = document.getElementById("start");
+    element.style.display = "none";
 
     var element = document.getElementById("botChoice");
     element.style.display = "block";
@@ -103,6 +88,5 @@ function getResult() {
 }
 
 function start() {
-    document.getElementById("blur").style.animation = "animation 2s forwards";
+    document.getElementById("blur").style.animation = "animation 4s forwards";
 }
->>>>>>> Stashed changes
