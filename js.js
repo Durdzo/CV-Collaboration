@@ -13,6 +13,11 @@ var element = document.getElementById("botChoice");
 element.style.display = "block";
 });
 
+var button = document.getElementById("start");
+button.addEventListener("click"), function() {
+var element = document.getElementById("blur");
+element.style.display = "none";
+}
 
 const computerChoiceDisplay = document.getElementById('computer-choice');
 const userChoiceDisplay = document.getElementById('user-choice');
