@@ -88,5 +88,5 @@ function getResult() {
 }
 
 function start() {
-    document.getElementById("blur").style.animation = "animation 4s forwards";
+    document.getElementById("blur").style.animation = "animation 5s forwards";
 }
