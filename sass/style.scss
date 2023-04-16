@@ -15,6 +15,12 @@ body {
     font-size: 1.6rem;
 }
 
+input,
+textarea {
+    font-family: "Montserrat";
+    font-weight: 700;
+}
+
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -57,6 +63,21 @@ nav {
     width: 100vw;
     background-color: #ffce28;
 
+    .burger-btn {
+        background-color: transparent;
+        margin-right: 45px;
+        font-size: 30px;
+        float: right;
+        border: none;
+        cursor: pointer;
+        display: none;
+        line-height: 80px;
+    }
+
+    .burger-btn:focus {
+        outline: none;
+    }
+
     .author {
         position: absolute;
         top: 18px;
@@ -67,21 +88,25 @@ nav {
     }
     .nav-box {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
 
-        a {
-            margin: 28px 0px 0;
+        li {
+            line-height: 80px;
             padding: 0 1.5rem;
             font-weight: 700;
             font-size: 2rem;
-            text-decoration: none;
             text-transform: uppercase;
-            color: #252525;
             transition: color 0.3s;
-        }
+            list-style: none;
 
-        a:hover {
-            color: #fff;
+            .nav-item {
+                text-decoration: none;
+                color: #252525;
+            }
+
+            .nav-item:hover {
+                color: #fff;
+            }
         }
     }
     .nav-box:last-child {
@@ -97,6 +122,9 @@ nav {
 
     .about-box {
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 80rem;
         height: 33rem;
 
@@ -144,6 +172,8 @@ nav {
 
         svg {
             position: absolute;
+            height: auto;
+            width: auto;
             top: 19.7rem;
             left: 7rem;
             z-index: -1;
@@ -243,16 +273,56 @@ nav {
     .text-box {
         display: flex;
         flex-direction: column;
+        align-items: center;
         .field {
             border: none;
+            box-shadow: 2px 2px 5px #2525252a;
         }
 
         .mail {
+            position: relative;
+            margin-right: 40rem;
             width: 20rem;
             height: 3rem;
             margin-bottom: 2rem;
             padding-left: 1rem;
             border-radius: 8px;
+        }
+
+        .message {
+            width: 60rem;
+            height: 40rem;
+            overflow-y: scroll;
+            resize: none;
+            border-radius: 8px;
+            padding-left: 1rem;
+            padding-top: 0.8rem;
+        }
+
+        .send-btn {
+            margin-top: 2rem;
+            margin-left: 42rem;
+        }
+    }
+}
+
+@media (max-width: 756px) {
+    nav {
+        .burger-btn {
+            display: block;
+        }
+
+        .nav-box {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: #ffce28;
+            // li {
+            //     display: none;
+            // }
+        }
+        ul.show {
+            display: flex;
         }
     }
 }

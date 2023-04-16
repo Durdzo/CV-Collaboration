@@ -15,6 +15,12 @@ body {
   font-size: 1.6rem;
 }
 
+input,
+textarea {
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -55,6 +61,19 @@ nav {
   width: 100vw;
   background-color: #ffce28;
 }
+nav .burger-btn {
+  background-color: transparent;
+  margin-right: 45px;
+  font-size: 30px;
+  float: right;
+  border: none;
+  cursor: pointer;
+  display: none;
+  line-height: 80px;
+}
+nav .burger-btn:focus {
+  outline: none;
+}
 nav .author {
   position: absolute;
   top: 18px;
@@ -65,19 +84,22 @@ nav .author {
 }
 nav .nav-box {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
-nav .nav-box a {
-  margin: 28px 0px 0;
+nav .nav-box li {
+  line-height: 80px;
   padding: 0 1.5rem;
   font-weight: 700;
   font-size: 2rem;
-  text-decoration: none;
   text-transform: uppercase;
-  color: #252525;
   transition: color 0.3s;
+  list-style: none;
 }
-nav .nav-box a:hover {
+nav .nav-box li .nav-item {
+  text-decoration: none;
+  color: #252525;
+}
+nav .nav-box li .nav-item:hover {
   color: #fff;
 }
 nav .nav-box:last-child {
@@ -90,6 +112,9 @@ nav .nav-box:last-child {
 }
 .about .about-box {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80rem;
   height: 33rem;
 }
@@ -134,6 +159,8 @@ nav .nav-box:last-child {
 }
 .about .about-box svg {
   position: absolute;
+  height: auto;
+  width: auto;
   top: 19.7rem;
   left: 7rem;
   z-index: -1;
@@ -215,14 +242,46 @@ nav .nav-box:last-child {
 .contact .text-box {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .contact .text-box .field {
   border: none;
+  box-shadow: 2px 2px 5px rgba(37, 37, 37, 0.1647058824);
 }
 .contact .text-box .mail {
+  position: relative;
+  margin-right: 40rem;
   width: 20rem;
   height: 3rem;
   margin-bottom: 2rem;
   padding-left: 1rem;
   border-radius: 8px;
+}
+.contact .text-box .message {
+  width: 60rem;
+  height: 40rem;
+  overflow-y: scroll;
+  resize: none;
+  border-radius: 8px;
+  padding-left: 1rem;
+  padding-top: 0.8rem;
+}
+.contact .text-box .send-btn {
+  margin-top: 2rem;
+  margin-left: 42rem;
+}
+
+@media (max-width: 756px) {
+  nav .burger-btn {
+    display: block;
+  }
+  nav .nav-box {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffce28;
+  }
+  nav ul.show {
+    display: flex;
+  }
 }/*# sourceMappingURL=style.css.map */

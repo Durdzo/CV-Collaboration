@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <script src="https://kit.fontawesome.com/197e9ba7b7.js" crossorigin="anonymous"></script>
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&family=Sacramento&display=swap"
             rel="stylesheet"
@@ -16,12 +17,15 @@
     <body>
         <nav class="nav">
             <div class="wrapper">
+                <button id="burger-btn" class="burger-btn">
+                    <i class="fa-solid fa-bars-staggered" style="color: #252525"></i>
+                </button>
                 <div class="author">john smith</div>
-                <div class="nav-box">
-                    <a class="nav-item" href="#about">about</a>
-                    <a class="nav-item" href="#projects">projects</a>
-                    <a class="nav-item" href="#contact">contact</a>
-                </div>
+                <ul id="nav-box" class="nav-box">
+                    <li><a class="nav-item" href="#about">about</a></li>
+                    <li><a class="nav-item" href="#projects">projects</a></li>
+                    <li><a class="nav-item" href="#contact">contact</a></li>
+                </ul>
             </div>
         </nav>
 
@@ -99,8 +103,12 @@
                             traditional game - rock beats scissors, scissors beat paper, and paper beats rock.
                         </p>
                         <div class="first-project-btn">
-                            <a href=""><button class="live-first-project btn">live game</button></a>
-                            <a href="https://github.com/" target="_blank"
+                            <a href="https://reliable-crisp-93a2b1.netlify.app/" target="_blank"
+                                ><button class="live-first-project btn">live game</button></a
+                            >
+                            <a
+                                href="https://github.com/Durdzo/CV-Collaboration/tree/Rock-Paper-Scissors"
+                                target="_blank"
                                 ><button class="git-first-project btn">gitHub</button></a
                             >
                         </div>
@@ -116,8 +124,10 @@
                             ends in a draw.
                         </p>
                         <div class="second-project-btn">
-                            <a href=""><button class="live-second-project btn">live game</button></a>
-                            <a href="https://github.com/" target="_blank"
+                            <a href="https://nik-tictactoe.netlify.app/" target="_blank"
+                                ><button class="live-second-project btn">live game</button></a
+                            >
+                            <a href="https://github.com/Durdzo/CV-Collaboration/tree/Tic-Tac-Toe" target="_blank"
                                 ><button class="git-second-project btn">gitHub</button></a
                             >
                         </div>
@@ -132,12 +142,12 @@
                 <div class="text-box">
                     <input type="mail" class="field mail" placeholder="Email" />
                     <textarea class="field message" placeholder="Message" cols="30" rows="10"></textarea>
+                    <button class="send-btn btn">send</button>
                 </div>
             </div>
         </section>
 
         <footer></footer>
-
-        <!-- <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> -->
     </body>
+    <script src="./js/script.js"></script>
 </html>
