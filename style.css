@@ -95,7 +95,7 @@ button {
   padding: 20px;
   background-color: #e55151;
   font-family: 'Montserrat', sans-serif;
-  border-radius: 42px;
+  /* border-radius: 42px; */
   cursor: pointer;
 }
 
@@ -107,6 +107,7 @@ button {
 
 .slide-right {
   background-color: #5cc4ff;
+  font-family: 'Montserrat', sans-serif;
   padding: 20px;
   color: white;
   animation: slide-right 0.5s forwards;
@@ -162,4 +163,32 @@ button {
     color: white;
     animation: slide-right 0.5s forwards;
   }
+}
+#kwadrat--0 {
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+}
+#kwadrat--1 {
+  border-top: 1px solid white;
+}
+#kwadrat--2 {
+  border-right: 1px solid white;
+  border-top: 1px solid white;
+}
+#kwadrat--3 {
+  border-left: 1px solid white;
+}
+#kwadrat--5 {
+  border-right: 1px solid white;
+}
+#kwadrat--6 {
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+}
+#kwadrat--7 {
+  border-bottom: 1px solid white;
+}
+#kwadrat--8 {
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
 }

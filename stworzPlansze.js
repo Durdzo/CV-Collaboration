@@ -15,7 +15,6 @@ export const stworzPlansze = () => {
 };
 
 // Dodawnie kółka lub krzyżyka do planszy
-
 let czyKolko = true; // flaga wskazująca, która postać powinna być dodana do kolejnej klikniętej komórki
 let czyPlanszaPelna = false; // flaga wskazująca, czy plansza jest już wypełniona
 

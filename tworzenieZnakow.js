@@ -1,4 +1,3 @@
-let wybranyZnak; // zmienna, w której będzie zapisany wybrany znak
 export const tworzenieZnakow = () => {
   // Pobieranie elementu HTML o identyfikatorze "wybor--znaku"
   const wyborZnaku = document.getElementById('wybor--znaku');
@@ -6,7 +5,11 @@ export const tworzenieZnakow = () => {
   // Tworzenie kontenrea krzyzyka
   const kontenerKrzyzyka = document.createElement('div');
   kontenerKrzyzyka.classList.add('kontenerKrzyzyka');
+  kontenerKrzyzyka.id = 'kontenerKrzyzyka';
   wyborZnaku.appendChild(kontenerKrzyzyka);
+
+  let wybranyZnak; // zmienna, w której będzie zapisany wybrany znak
+
   // Obsługa zdarzenia kliknięcia krzyżyla
   kontenerKrzyzyka.addEventListener('click', function () {
     wybranyZnak = 'X';
@@ -29,6 +32,7 @@ export const tworzenieZnakow = () => {
   // Tworzenie diva kólko
   const kolko = document.createElement('div');
   kolko.classList.add('kolko');
+  kolko.id = 'kolko';
   wyborZnaku.appendChild(kolko);
 
   // Obsługa zdarzenia kliknięcia kółka
@@ -36,4 +40,5 @@ export const tworzenieZnakow = () => {
     wybranyZnak = 'O';
     console.log('Wybrałeś kółko');
   });
+  console.log(wybranyZnak);
 };
