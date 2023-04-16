@@ -1,28 +1,9 @@
-var button = document.getElementById("start");
-button.addEventListener("click", function () {
-    var element = document.getElementById("players");
-    element.style.display = "block";
-
-    var element = document.getElementById("start");
-    element.style.display = "none";
-
-    var element = document.getElementById("botChoice");
-    element.style.display = "block";
-});
-
-// var button = document.getElementById("start");
-// button.addEventListener("click"),
-//     function () {
-//         var element = document.getElementById("blur");
-//         element.style.display = "none";
-//     };
-
+const button = document.getElementById("start");
 const computerChoiceDisplay = document.getElementById("computer-choice");
 const userChoiceDisplay = document.getElementById("user-choice");
 const resultDisplay = document.getElementById("result");
 const userScoreDisplay = document.getElementById("user-score");
 const computerScoreDisplay = document.getElementById("computer-score");
-const possibleChoices = document.querySelectorAll("button");
 
 let userChoice;
 let computerChoice;
@@ -30,14 +11,33 @@ let result;
 let userScore = 0;
 let computerScore = 0;
 
-possibleChoices.forEach((possibleChoice) =>
-    possibleChoice.addEventListener("click", (e) => {
-        userChoice = e.target.id;
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
+
+function playerChoice() {
+    rock.addEventListener("click", () => {
+        userChoice = "rock";
         userChoiceDisplay.innerHTML = userChoice;
         generateComputerChoice();
         getResult();
-    })
-);
+        console.log();
+    });
+
+    paper.addEventListener("click", () => {
+        userChoice = "paper";
+        userChoiceDisplay.innerHTML = userChoice;
+        generateComputerChoice();
+        getResult();
+    });
+
+    scissors.addEventListener("click", () => {
+        userChoice = "scissors";
+        userChoiceDisplay.innerHTML = userChoice;
+        generateComputerChoice();
+        getResult();
+    });
+}
 
 function generateComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3) + 1;
@@ -87,6 +87,27 @@ function getResult() {
     computerScoreDisplay.innerHTML = computerScore;
 }
 
-function start() {
-    document.getElementById("blur").style.animation = "animation 5s forwards";
-}
+const blurOpacity = [{ opacity: 0 }];
+
+const blurTiming = {
+    duration: 500,
+};
+
+const blurOut = document.getElementById("blur");
+
+button.addEventListener("click", () => {
+    blurOut.animate(blurOpacity, blurTiming);
+    button.animate(blurOpacity, blurTiming);
+
+    setTimeout(function () {
+        document.getElementById("blur").style.opacity = "0";
+        document.getElementById("blur").style.zIndex = "-1";
+    }, 400);
+
+    setTimeout(function () {
+        document.getElementById("start").style.opacity = "0";
+        document.getElementById("start").style.zIndex = "-1";
+    }, 400);
+});
+
+playerChoice();
