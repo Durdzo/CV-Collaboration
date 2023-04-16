@@ -22,9 +22,9 @@
                 </button>
                 <div class="author">john smith</div>
                 <ul id="nav-box" class="nav-box">
-                    <li><a class="nav-item" href="#about">about</a></li>
-                    <li><a class="nav-item" href="#projects">projects</a></li>
-                    <li><a class="nav-item" href="#contact">contact</a></li>
+                    <li><a id="nav-item" class="nav-item" href="#about">about</a></li>
+                    <li><a id="nav-item" class="nav-item" href="#projects">projects</a></li>
+                    <li><a id="nav-item" class="nav-item" href="#contact">contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -33,17 +33,26 @@
             <div class="wrapper">
                 <div class="about-box">
                     <div class="text-content">
-                        <h2 class="about-title">
-                            <span class="blue">junior</span><span>frontend</span><span>developer</span>
-                        </h2>
-                        <p>
-                            I am passionate about creating beautiful and functional websites that enhance user
-                            experience. With a keen eye for detail and a commitment to continuous learning, I am excited
-                            to contribute to the dynamic world of web development.
-                        </p>
+                        <img src="./img/john_photo_square.jpg" alt="Portret John Smith" />
+
+                        <div class="text-text">
+                            <h2 class="about-title">
+                                <span class="blue about-heading">junior</span><span class="about-heading">frontend</span><span class="about-heading">developer</span>
+                            </h2>
+                            <p>
+                                I am passionate about creating beautiful and functional websites that enhance user
+                                experience. With a keen eye for detail and a commitment to continuous learning, I am
+                                excited to contribute to the dynamic world of web development.
+                            </p>
+                            <div class="social-icons">
+                                <a href="https://twitter.com/login"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <img src="./img/john_photo_square.jpg" alt="Portret John Smith" />
-                    <svg
+                    <!-- <svg
                         width="1071"
                         height="573"
                         viewBox="0 0 1071 573"
@@ -86,11 +95,11 @@
                                 />
                             </filter>
                         </defs>
-                    </svg>
+                    </svg> -->
                 </div>
             </div>
         </section>
-        <section id="projects" class="projects">
+        <!-- <section id="projects" class="projects">
             <div class="wrapper">
                 <h2 class="projects-heading">projects</h2>
                 <div class="first-project">
@@ -147,7 +156,9 @@
             </div>
         </section>
 
-        <footer></footer>
+        <footer>
+            <p class="footer-text">&copy; <span class="footer-year"></span> John Smith</p>
+        </footer> -->
     </body>
     <script src="./js/script.js"></script>
 </html>
