@@ -135,7 +135,17 @@ body {
     height: 100px;
     background-color: white;
     border-radius: 50%;
-    border: 1px black solid;
+    /* border: 1px black solid; */
+    border: none;
+    box-shadow: 1px 1px 5px #33333352;
+    transition: all 0.3s;
+}
+
+#rock:hover {
+    background: url("./icons/rock.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #result {
@@ -183,4 +193,24 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.icon {
+    font-size: 50px;
+    color: #134f69;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.fa-hand:hover,
+.fa-hand-scissors:hover {
+    scale: 1.2;
+}
+
+.fa-hand-back-fist {
+    padding: 27px;
+}
+
+.fa-hand-back-fist:hover {
+    opacity: 0;
 }
