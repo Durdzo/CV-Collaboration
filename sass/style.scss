@@ -349,7 +349,7 @@ nav {
 
 }
 
-@media (max-width: 756px) {
+@media (max-width: 768px) {
     nav {
         .burger-btn {
             display: block;
@@ -360,9 +360,6 @@ nav {
             flex-direction: column;
             width: 100%;
             background-color: #ffce28;
-            // li {
-            //     display: none;
-            // }
         }
         ul.show {
             display: flex;
