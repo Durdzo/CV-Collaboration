@@ -93,7 +93,7 @@ button {
   color: white;
   font-size: 22px;
   padding: 20px;
-  background-color: #e55151;
+  background-color: #b11313;
   font-family: 'Montserrat', sans-serif;
   /* border-radius: 42px; */
   cursor: pointer;
@@ -106,7 +106,7 @@ button {
 }
 
 .slide-right {
-  background-color: #5cc4ff;
+  background-color: #2e86ab;
   font-family: 'Montserrat', sans-serif;
   padding: 20px;
   color: white;
@@ -191,4 +191,26 @@ button {
 #kwadrat--8 {
   border-bottom: 1px solid white;
   border-right: 1px solid white;
+}
+
+.przekreslenie-1 {
+  position: absolute;
+  width: 100px;
+  height: 1px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wygrana {
+  background-color: #2e86ab;
+  color: white;
+  animation-name: fade-in;
+  animation-duration: 0.5s;
 }

@@ -21,6 +21,7 @@ let czyPlanszaPelna = false; // flaga wskazująca, czy plansza jest już wypełn
 function obslugaKlikniecia(event) {
   // obsługa kliknięcia na komórkę
   if (czyPlanszaPelna) {
+    alert('Remis');
     return; // jeśli plansza jest już wypełniona, to nie można już klikać w komórki
   }
 
@@ -63,13 +64,25 @@ function obslugaKlikniecia(event) {
     [0, 4, 8],
     [2, 4, 6],
   ];
+  // for (const [a, b, c] of plansza) {
+  //   if (
+  //     komorki[a].textContent &&
+  //     komorki[a].textContent === komorki[b].textContent &&
+  //     komorki[a].textContent === komorki[c].textContent
+  //   ) {
+  //     // alert('Gracz ' + komorki[a].textContent + ' wygrał!');
+  //     console.log('Gracz ' + komorki[a].textContent + ' wygrał!');
   for (const [a, b, c] of plansza) {
     if (
       komorki[a].textContent &&
       komorki[a].textContent === komorki[b].textContent &&
       komorki[a].textContent === komorki[c].textContent
     ) {
-      // alert('Gracz ' + komorki[a].textContent + ' wygrał!');
+      // dodanie klasy do elementów planszy w wygrywającej sekwencji
+      komorki[a].classList.add('wygrana');
+      komorki[b].classList.add('wygrana');
+      komorki[c].classList.add('wygrana');
+
       console.log('Gracz ' + komorki[a].textContent + ' wygrał!');
       // Tworzenie drugiego diva
       const secondDiv = document.createElement('div');
