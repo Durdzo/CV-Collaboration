@@ -1,3 +1,7 @@
+:root {
+  --kolor-przycisku: black;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -93,7 +97,7 @@ button {
   color: white;
   font-size: 22px;
   padding: 20px;
-  background-color: #b11313;
+  background-color: var(--kolor-przycisku);
   font-family: 'Montserrat', sans-serif;
   /* border-radius: 42px; */
   cursor: pointer;
@@ -106,7 +110,7 @@ button {
 }
 
 .slide-right {
-  background-color: #2e86ab;
+  background-color: black;
   font-family: 'Montserrat', sans-serif;
   padding: 20px;
   color: white;
@@ -209,7 +213,7 @@ button {
 }
 
 .wygrana {
-  background-color: #2e86ab;
+  background-color: rgba(0, 0, 0, 0.67);
   color: white;
   animation-name: fade-in;
   animation-duration: 0.5s;
