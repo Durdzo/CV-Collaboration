@@ -64,14 +64,7 @@ function obslugaKlikniecia(event) {
     [0, 4, 8],
     [2, 4, 6],
   ];
-  // for (const [a, b, c] of plansza) {
-  //   if (
-  //     komorki[a].textContent &&
-  //     komorki[a].textContent === komorki[b].textContent &&
-  //     komorki[a].textContent === komorki[c].textContent
-  //   ) {
-  //     // alert('Gracz ' + komorki[a].textContent + ' wygrał!');
-  //     console.log('Gracz ' + komorki[a].textContent + ' wygrał!');
+
   for (const [a, b, c] of plansza) {
     if (
       komorki[a].textContent &&
@@ -83,7 +76,7 @@ function obslugaKlikniecia(event) {
       komorki[b].classList.add('wygrana');
       komorki[c].classList.add('wygrana');
 
-      console.log('Gracz ' + komorki[a].textContent + ' wygrał!');
+      console.log('Gracz ' + komorki[a].textContent + ' wygrał');
       // Tworzenie drugiego diva
       const secondDiv = document.createElement('div');
       secondDiv.id = 'second-div';
@@ -96,13 +89,29 @@ function obslugaKlikniecia(event) {
       // Zmiana tekstu drugiego diva
       const updatedSecondDiv = document.getElementById('second-div');
       updatedSecondDiv.textContent =
-        'Gracz ' + komorki[a].textContent + ' wygrał!';
+        'Gracz ' + komorki[a].textContent + ' wygrał';
       // Dodaj klasę CSS do elementu, który zawiera tekst
       updatedSecondDiv.classList.add('slide-right');
       // Dodaj klasę CSS, która zmniejsza element plansza
       const plansza = document.getElementById('plansza');
       plansza.classList.add('scale-down');
       czyPlanszaPelna = true;
+      break;
+    }
+    if (czyPlanszaPelna) {
+      const secondDiv = document.createElement('div');
+      secondDiv.id = 'second-div';
+      secondDiv.textContent = 'To jest drugi div';
+      const info = document.getElementById('info');
+      info.appendChild(secondDiv);
+
+      const updatedSecondDiv = document.getElementById('second-div');
+      updatedSecondDiv.textContent = 'Remis';
+      updatedSecondDiv.classList.add('slide-right');
+
+      const plansza = document.getElementById('plansza');
+      plansza.classList.add('scale-down');
+
       break;
     }
   }
