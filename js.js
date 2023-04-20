@@ -4,6 +4,7 @@ const userChoiceDisplay = document.getElementById("user-choice");
 const resultDisplay = document.getElementById("result");
 const userScoreDisplay = document.getElementById("user-score");
 const computerScoreDisplay = document.getElementById("computer-score");
+const playAgain = document.getElementById("play-again");
 
 let userChoice;
 let computerChoice;
@@ -14,6 +15,9 @@ let computerScore = 0;
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
+
+var winGame = false;
+var loseGame = false;
 
 function playerChoice() {
     rock.addEventListener("click", () => {
@@ -111,3 +115,31 @@ button.addEventListener("click", () => {
 });
 
 playerChoice();
+
+
+window.onload = function () {
+    setInterval(update, 1000 / 10);
+}
+
+function update() {
+    if (winGame || loseGame) {
+        return;
+    }
+
+    if (userScore >= 3) {
+        winGame = true;
+        document.getElementById("end-game").style.display = "block";
+        document.getElementById("end-result").innerHTML = "YOU WIN!!";
+    }
+
+    if (computerScore >= 3) {
+        loseGame = true;
+        document.getElementById("end-game").style.display = "block";
+        document.getElementById("end-result").innerHTML = "YOU LOSE!!";
+    }
+}
+
+const refreshPage = () => {
+    location.reload();
+}
+playAgain.addEventListener('click', refreshPage)

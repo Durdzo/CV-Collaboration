@@ -16,7 +16,8 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%) center;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 15%, rgba(255,206,40,1) 45%, rgba(53,41,37,1) 82%);
     filter: blur(10px);
     opacity: 1;
 }
@@ -92,9 +93,11 @@ body {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    background-color: lightblue;
+    background-color: #ffce28;
     filter: none;
     z-index: 10;
+    border: none;
+    box-shadow: 2px 2px 5px #25252542;
 }
 
 .container {
@@ -166,33 +169,76 @@ body {
 
 #end-game {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 500px;
-    height: 500px;
-    background-color: white;
+    width: 400px;
+    height: 350px;
+    background-color: #ffce28;
     z-index: 99;
     display: none;
+    border-radius: 2%;
+    box-shadow: 2px 2px 5px #25252542;
 }
 
 #play-again {
-    position: absolute;
     top: 65%;
-    left: 50%;
+    left: 36%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     z-index: 100;
+    animation: wiggle 2s linear infinite;
+    position: absolute;
+    height: 4em;
+    width: 7em;
+    background: #444;
+    background: linear-gradient(top, #555, #333);
+    border: none;
+    border-top: 3px solid rgb(189, 189, 189);
+    border-radius: 0 0 0.2em 0.2em;
+    color: #fff;
+    font-size: 1em;
+    transform-origin: 50% 5em;
+    box-shadow: 2px 2px 5px #25252542;
 }
 
-#end-reasult {
+#play-again:hover {
+    border: 3px solid rgb(189, 189, 189);
+}
+
+#end-result {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 2em;
+}
+
+@keyframes wiggle {
+    0%, 7% {
+        transform: rotateZ(0);
+    }
+    15% {
+        transform: rotateZ(-15deg);
+    }
+    20% {
+        transform: rotateZ(10deg);
+    }
+    25% {
+        transform: rotateZ(-10deg);
+    }
+    30% {
+        transform: rotateZ(6deg);
+    }
+    35% {
+        transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+        transform: rotateZ(0);
+    }
 }
 
 .icon {
