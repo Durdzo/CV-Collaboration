@@ -66,17 +66,30 @@ nav {
 
     .burger-btn {
         background-color: transparent;
-        margin-right: 45px;
+        margin-right: 37px;
+        margin-top: 17px;
         font-size: 30px;
         float: right;
-        border: none;
+        border: 1px solid transparent;
         cursor: pointer;
         display: none;
-        line-height: 80px;
+        z-index: 10;
+        padding: 7px;
+
+        .burger-icon {
+            color: #252525;
+            transition: color 0.3s;
+        }
+
+        .burger-btn:focus {
+            outline: none;
+        }
     }
 
-    .burger-btn:focus {
-        outline: none;
+    .burger-btn:hover {
+        .burger-icon {
+            color: #fff;
+        }
     }
 
     .author {
@@ -97,12 +110,12 @@ nav {
             font-weight: 700;
             font-size: 2rem;
             text-transform: uppercase;
-            transition: color 0.3s;
             list-style: none;
 
             .nav-item {
                 text-decoration: none;
                 color: #252525;
+                transition: color 0.3s;
             }
 
             .nav-item:hover {
@@ -110,6 +123,7 @@ nav {
             }
         }
     }
+
     .nav-box:last-child {
         margin-right: 3rem;
     }
@@ -164,8 +178,7 @@ nav {
                     }
 
                     i {
-                        transition: color 0.3s;
-                        transition: scale 0.4s ease;
+                        transition: all 0.3s ease;
                     }
 
                     i:hover {
@@ -211,21 +224,23 @@ nav {
 .projects {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #fff;
+    padding: 13rem 0 10rem 0;
 
     .projects-heading {
-        padding-top: 12rem;
-        padding-bottom: 7rem;
+        padding-top: rem;
+        padding-bottom: 1rem;
         font-weight: 700;
         font-size: 4.8rem;
         text-transform: uppercase;
         text-align: center;
         color: #252525;
     }
-
     .first-project {
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: row;
         margin-bottom: 3rem;
         padding: 0 21rem;
@@ -238,11 +253,6 @@ nav {
     .first-project-box {
         margin: 10px 50px;
 
-        .first-project-title {
-            padding-bottom: 1.5rem;
-            padding-top: 4rem;
-        }
-
         .first-project-text {
             width: 45rem;
             padding-bottom: 2rem;
@@ -253,9 +263,9 @@ nav {
 
     .second-project {
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: row-reverse;
-        margin-bottom: 8rem;
-        padding: 0 18rem;
 
         .game-two-img {
             height: 300px;
@@ -263,12 +273,7 @@ nav {
     }
 
     .second-project-box {
-        margin-top: 1rem;
-
-        .second-project-title {
-            padding-top: 40px;
-        }
-
+        margin: 10px 50px;
         .second-project-text {
             width: 45rem;
             padding-bottom: 20px;
@@ -283,11 +288,10 @@ nav {
 .contact {
     position: relative;
     width: 100%;
-    height: 95vh;
+    padding-top: 12rem;
 
     .contact-heading {
-        padding-top: 12rem;
-        padding-bottom: 7rem;
+        padding-bottom: 2rem;
         font-weight: 700;
         font-size: 4.8rem;
         text-transform: uppercase;
@@ -325,31 +329,176 @@ nav {
         }
 
         .send-btn {
-            margin-top: 2rem;
-            margin-left: 42rem;
+            margin: 2rem 0 5rem 42rem;
         }
     }
 }
 
-@media (max-width: 576px) {
+// footer
 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    background-color: #252525;
+    margin-top: 2rem;
+    .footer-text {
+        color: #fff;
+        font-size: 1.4rem;
+    }
+}
 
+@media (min-width: 320px) {
+    .titles {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .btn {
+        width: 10rem;
+        margin: 0;
+    }
 
     .about {
+        height: 100%;
         .about-box {
-            .text-content{
+            .text-content {
+                margin-top: 7.5rem;
+                flex-direction: column;
                 .text-text {
+                    width: 30rem;
                     .about-heading {
                         font-size: 3rem;
                     }
+                    .social-icons {
+                        margin-top: 3rem;
+                        .fa-brands {
+                            font-size: 3rem;
+                        }
+                    }
                 }
+            }
+            img {
+                margin-top: 3rem;
+                height: 25rem;
+                width: 25rem;
+            }
+        }
+    }
+    nav {
+        .burger-btn {
+            display: block;
+            margin-right: 10px;
+        }
+
+        .nav-box {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: #ffce28;
+        }
+        ul.show {
+            display: flex;
+        }
+    }
+
+    .projects {
+        height: 100%;
+        padding: 3rem 0 1rem 0;
+        .project {
+            flex-direction: column;
+        }
+        .projects-heading {
+            font-size: 2.5rem;
+        }
+
+        .first-project {
+            margin: 0 1rem 5rem 1rem;
+            padding: 0;
+            .game-one-img {
+                height: 200px;
+            }
+
+            .first-project-box {
+                .first-project-text {
+                    font-size: 1.3rem;
+                    width: 24rem;
+                    text-align: center;
+                }
+
+                .first-project-btn {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        .second-project {
+            margin: 0 1rem 5rem 1rem;
+            padding: 0;
+            .second-project-text {
+                font-size: 1.3rem;
+                width: 24rem;
+                text-align: center;
+            }
+            .game-two-img {
+                height: 200px;
+            }
+
+            .second-project-btn {
+                display: flex;
+                justify-content: space-between;
             }
         }
     }
 
+    .contact {
+        padding: 3rem 0 0 0;
+
+        .contact-heading {
+            font-size: 2.5rem;
+        }
+
+        .text-box {
+            .mail {
+                margin-right: 10rem;
+            }
+            .message {
+                width: 30rem;
+            }
+            .send-btn {
+                margin: 2rem 0 2rem 18rem;
+            }
+        }
+    }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 576px) {
+    .titles {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .btn {
+        width: 10rem;
+        margin: 0;
+    }
+
+    .about {
+        height: 100%;
+        .about-box {
+            padding: 10rem 0;
+            img {
+                margin-top: 3rem;
+            }
+        }
+    }
+
+    .btn {
+        width: 10rem;
+    }
+
     nav {
         .burger-btn {
             display: block;
@@ -365,10 +514,204 @@ nav {
             display: flex;
         }
     }
+
+    .projects {
+        padding: 10rem 0;
+        .project {
+            flex-direction: row;
+            margin: 5rem 0;
+        }
+        .projects-heading {
+            font-size: 4rem;
+            padding: 0;
+        }
+
+        .first-project {
+            .game-one-img {
+                height: 200px;
+            }
+
+            .first-project-box {
+                .first-project-text {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        .second-project {
+            flex-direction: row-reverse;
+            .second-project-text {
+                font-size: 1.3rem;
+            }
+            .game-two-img {
+                height: 200px;
+            }
+        }
+    }
+
+    .contact {
+        padding: 10rem 0 5rem 0;
+
+        .contact-heading {
+            font-size: 4rem;
+        }
+
+        .text-box {
+            .mail {
+                margin-right: 20rem;
+            }
+            .message {
+                width: 40rem;
+            }
+            .send-btn {
+                margin: 2rem 0 2rem 30rem;
+            }
+        }
+    }
 }
 
-@media (max-width: 992px) {
-    .text-content {
-        flex-direction: column;
+@media (min-width: 756px) {
+    nav {
+        .burger-btn {
+            display: none;
+        }
+
+        .nav-box {
+            display: flex;
+            flex-direction: row;
+            background-color: #ffce28;
+
+            .last {
+                margin-right: 3rem;
+            }
+        }
     }
+}
+
+@media (min-width: 992px) {
+    .about {
+        height: 100vh;
+        .about-box {
+            .text-content {
+                flex-direction: row;
+
+                .text-text {
+                    width: 43.7rem;
+                    .about-heading {
+                        font-size: 3.6rem;
+                    }
+                    .social-icons {
+                        margin-top: 3rem;
+                        .fa-brands {
+                            font-size: 4rem;
+                        }
+                    }
+                }
+            }
+            img {
+                height: 32.2rem;
+                width: 32.2rem;
+            }
+        }
+    }
+
+    .projects {
+        height: 100vh;
+        padding: 10rem 0 5rem 0;
+        .project {
+            flex-direction: row;
+        }
+        .projects-heading {
+            font-size: 4.8rem;
+        }
+
+        .first-project {
+            margin: 2rem 1rem 5rem 1rem;
+            padding: 0;
+            .game-one-img {
+                height: 200px;
+            }
+
+            .first-project-box {
+                .first-project-text {
+                    font-size: 1.3rem;
+                    width: 24rem;
+                    text-align: center;
+                }
+
+                .first-project-btn {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        .second-project {
+            margin: 0 1rem 5rem 1rem;
+            padding: 0;
+            .second-project-text {
+                font-size: 1.3rem;
+                width: 24rem;
+                text-align: center;
+            }
+            .game-two-img {
+                height: 200px;
+            }
+
+            .second-project-btn {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .contact {
+        padding: 10rem 0 0 0;
+
+        .contact-heading {
+            font-size: 4.8rem;
+        }
+
+        .text-box {
+            .mail {
+                margin-right: 40rem;
+            }
+            .message {
+                width: 60rem;
+            }
+            .send-btn {
+                margin: 2rem 0 5.5rem 45rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .projects {
+        height: 100vh;
+
+        .first-project {
+            margin: 2rem 1rem 5rem 1rem;
+            .game-one-img {
+                height: 300px;
+            }
+
+            .first-project-box {
+                .first-project-text {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .second-project {
+            margin: 0 1rem 5rem 1rem;
+            .second-project-text {
+                font-size: 1.5rem;
+            }
+            .game-two-img {
+                height: 300px;
+            }
+        }
+    }
+
 }
